@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpJ-gS-ftN">
+                                <rect key="frame" x="16" y="629" width="88" height="30"/>
+                                <state key="normal" title="Scroll to Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleScrollLeft:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MVw-Tj-lLt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAj-jI-NEB">
+                                <rect key="frame" x="262" y="629" width="97" height="30"/>
+                                <state key="normal" title="Scroll to Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleScrollRight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lHO-Jf-2NO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Af-sJ-wTH" customClass="MCTimeSeriesView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="534"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="2GH-BK-Uh8"/>
+                                    <constraint firstAttribute="width" secondItem="8Af-sJ-wTH" secondAttribute="height" multiplier="1:1" id="huD-UA-VJK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2GH-BK-Uh8"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Af-sJ-wTH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="47W-Br-pBD"/>
+                            <constraint firstAttribute="trailing" secondItem="8Af-sJ-wTH" secondAttribute="trailing" id="8DE-7o-MzW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="NpJ-gS-ftN" secondAttribute="bottom" constant="8" id="AO3-Ow-L1I"/>
+                            <constraint firstAttribute="centerY" secondItem="8Af-sJ-wTH" secondAttribute="centerY" constant="13" id="KJ9-po-XNc"/>
+                            <constraint firstItem="NpJ-gS-ftN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Soi-M9-Dck"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="FAj-jI-NEB" secondAttribute="bottom" constant="8" id="aen-5v-k6f"/>
+                            <constraint firstItem="8Af-sJ-wTH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="cVh-p0-SNV"/>
+                            <constraint firstItem="FAj-jI-NEB" firstAttribute="top" secondItem="8Af-sJ-wTH" secondAttribute="bottom" constant="8" id="dnQ-h5-9yI"/>
+                            <constraint firstAttribute="trailing" secondItem="FAj-jI-NEB" secondAttribute="trailing" constant="16" id="z78-KF-ef4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cVh-p0-SNV"/>
+                                <exclude reference="dnQ-h5-9yI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chartView" destination="8Af-sJ-wTH" id="1Wv-wp-KbD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
