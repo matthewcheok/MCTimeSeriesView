@@ -1,8 +1,8 @@
 MCTimeSeriesView ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
 ========================
 
-[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/MCGraphView/badge.png)](https://github.com/matthewcheok/MCTimeSeriesView)
-[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/MCGraphView/badge.svg)](https://github.com/matthewcheok/MCTimeSeriesView)
+[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/MCTimeSeriesView/badge.png)](https://github.com/matthewcheok/MCTimeSeriesView)
+[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/MCTimeSeriesView/badge.svg)](https://github.com/matthewcheok/MCTimeSeriesView)
 
 A light-weight solution for displaying time series charts.
 
